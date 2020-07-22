@@ -3,6 +3,7 @@
 ### 2. The front-end and back end is managed by web.py and for front end html , CSS ,Bootstrap is used.
 ### 3. The mangoDB database is used for this project for storing the user adat and the posts that they push on the site.
 ### 4. The sessions is used to make a person logged in and a log out button is given to end the session.
+### 5. while posting the Blog the Python Humanize Library of time stamp is used to show the time passed after the blog was posted 
 
 ## The un-logged look of the site:
 ![socialwizard1](https://user-images.githubusercontent.com/44469087/88183367-0402da80-cc4f-11ea-9fe5-11aaf5de9945.png)
@@ -16,5 +17,10 @@
 ![socialwizard4](https://user-images.githubusercontent.com/44469087/88183938-be92dd00-cc4f-11ea-913d-79959f52b914.png)
 
 ## The main page look after logging in and session starts: 
+![socialwizard5](https://user-images.githubusercontent.com/44469087/88184442-555f9980-cc50-11ea-9656-1f7bd7daf51d.png)
+
+## The Profile of the user:
+
+## The Setting page for user to upadate his information:
 
 
