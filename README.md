@@ -20,7 +20,10 @@
 ![socialwizard5](https://user-images.githubusercontent.com/44469087/88184442-555f9980-cc50-11ea-9656-1f7bd7daf51d.png)
 
 ## The Profile of the user:
+![socialwizard6](https://user-images.githubusercontent.com/44469087/88184953-f8b0ae80-cc50-11ea-8e40-7b6df9d76108.png)
 
 ## The Setting page for user to upadate his information:
+
+![socialwizard7](https://user-images.githubusercontent.com/44469087/88184942-f64e5480-cc50-11ea-8ab1-4a671601b37e.png)
 
 
