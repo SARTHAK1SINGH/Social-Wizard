@@ -16,7 +16,7 @@
 ## The MongoDB look of data stored of user password is binary coded for better secority of data:
 ![socialwizard4](https://user-images.githubusercontent.com/44469087/88183938-be92dd00-cc4f-11ea-913d-79959f52b914.png)
 
-## The main page look after logging in and session starts: 
+## The main page look after logging in and session starts , you can see the Humanize time effect after name in post: 
 ![socialwizard5](https://user-images.githubusercontent.com/44469087/88184442-555f9980-cc50-11ea-9656-1f7bd7daf51d.png)
 
 ## The Profile of the user:
