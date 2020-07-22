@@ -1,0 +1,64 @@
+$def with (posts)
+
+<div class="container">
+    $if session['user'] == None:
+        <h1>Heloo SocialWizard please Login or Register with us....</h1>
+    $else:
+        <div class="row">
+            <div class=" col-md-3 col-sm-12 w3-left" style="hight: 100%;">
+                <ul class="sidebar" style="list-style-type: none;">
+                    <li > <a class="btn btn-success" href="/"><i class="fa fa-home" aria-hidden="true"></i> Home Feed</a></li><br>
+                    <li class="ripple-container"> <a href="/profile"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li><br>
+                    <li> <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> Messages</a></li><br>
+                    <li> <a href="#"><i class="fa fa-handshake-o" aria-hidden="true"></i> Friends</a></li><br>
+                    <li> <a href="#"><i class="fa fa-users" aria-hidden="true"></i> Communities</a></li><br>
+                    <li> <a href="#"><i class="fa fa-bell" aria-hidden="true"></i> Notifications</a></li><br><br>
+
+                    <li> <a href="/setting"><i class="fa fa-cogs" aria-hidden="true"></i> Setting</a></li><br>
+                    <li> <a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a></li><br>
+
+                </ul>
+            </div>
+            <div class="col-md-6 col-sm-12 w3-right" style="hight: 100%;">
+                <div class="post-box">
+                    <form id="post-activity">
+                    <textarea name="content" rows="6" cols="50" class="post-input" placeholder="What's in mind $session['user']['name']?.."></textarea><br>
+                    <button id="post-button" class="btn btn-info btn-raised waves-effect" type="submit"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Post</button>
+                    </form>
+                </div>
+                <br>
+                $for post in posts:
+                    <div class="w3-card" style="width:70%;">
+                        <header class="w3-container">
+                            <div class="avatar"></div>
+                            <br>
+                            <h3><a href="/profile">$session['user']['name']</a></h3>
+                            <h5>$post['timestamp']</h5>
+                            <hr>
+                        </header>
+                        <div class="w3-container">
+                          <p>$post["content"]</p>
+                        </div>
+                        <hr>
+                        <footer class="w3-container">
+                          <button class="btn btn-default" ><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> &nbsp;&nbsp;
+                            <button class="btn btn-default" ><i class="fa fa-comments" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                            <button class="btn btn-default" ><i class="fa fa-share-square-o" aria-hidden="true"></i></button>
+                            <br><br>
+                        </footer>
+                    </div>
+                    <div class="comment-add">
+                        <div class="header">
+                            <form class="comment-form">
+                                <input name="post_id" class="hidden" value="$post['_id']">
+                                 <textarea name="comment" rows="6" cols="50" class="post-input" placeholder="Comment now.."></textarea><br>
+                                 <button id="comment-button" class="btn btn-info btn-raised waves-effect" type="submit"><i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                    <br><br><br>
+
+            </div>
+        </div>
+
+</div>

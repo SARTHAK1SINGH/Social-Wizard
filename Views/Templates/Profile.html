@@ -1,0 +1,42 @@
+$def with (posts)
+
+<div class="container">
+    
+    $if session['user'] == None:
+        <h1>Heloo SocialWizard please Login or Register with us....</h1>
+    $else:
+        <div class="w3-center">
+                <div >
+                    <img src="https://pramanaexperience.com/wp-content/uploads/2019/09/mount-batur-sunrise-trekking.jpg" alt="Nature" class="responsive">
+                </div>
+            <hr><hr>
+            <h1>Name : $session['user']['name']</h1>
+            <h2>Username: $session['user']['username']</h2>
+            <h2>Email id: $session['user']['email']</h2>
+            <hr><hr>
+            <h1><u>My Posts</u></h1>
+            <br>
+             $for post in posts:
+                    <div class="w3-card" style="width:100%;">
+                        <header class="w3-container">
+                            <div class="avatar"></div>
+                            <br>
+                            <h3><a href="/profile">$session['user']['name']</a></h3>
+                            <hr>
+                        </header>
+                        <div class="w3-container">
+                          <p>$post["content"]</p>
+                        </div>
+                        <hr>
+                        <footer class="w3-container">
+                          <button class="btn btn-default" ><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></button> &nbsp;&nbsp;
+                            <button class="btn btn-default" ><i class="fa fa-comments" aria-hidden="true"></i></button>&nbsp;&nbsp;
+                            <button class="btn btn-default" ><i class="fa fa-share-square-o" aria-hidden="true"></i></button>
+                            <br><br>
+                        </footer>
+                    </div>
+                    <br><br><br>
+
+        </div>
+    
+</div>

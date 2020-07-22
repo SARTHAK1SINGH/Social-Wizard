@@ -1,0 +1,57 @@
+$def with (page)
+$var js: static/js/bootstrap.min.js static/js/scripty.js
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mainlayout</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+    .responsive {
+      width: 100%;
+      height: 30%;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <div class="navbar navbar-info navbar-fixed-top w3-black w3-large" >
+            <div class="navbar-header">
+                <a class="navbar-brand">SocialWizard</a>
+            </div>
+
+            <ul class="nav navbar-nav">
+                <li> <a class="waves-effect" href="/">Home Feed<div class="ripple-container"></div></a></li>
+                <li> <a  href="/profile">Profile<div class="ripple-container"></div></a></li>
+                <li> <a  href="/setting">Setting<div class="ripple-container"></div></a></li>
+            </ul>
+            <div class="pull-right">
+                $if session['user'] == None:
+                    <a style="margin-top:10px;"  href="/login" class="btn btn-success waves-effect">Login</a>
+                    <a style="margin-top:10px;"  href="/register" class="btn btn-raised btn-danger waves-effect">Register</a>&nbsp; &nbsp;
+                $else:
+                    <a style="margin-top:10px; margin-left:5px; "  id="logout-link" class="btn btn-danger waves-effect">Logout</a> 
+            </div>
+        </div>
+        <br><br><br>
+        $:page
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.9/js/ripples.min.js" integrity="sha512-0GHGzq3KbbzUN1B+Vv0GFkvgEMYECMbMYH2MRpJYFTOBVi6w9qK6JvzND3AUf1k3lw8rQ/BX6XToXn12a5n8wg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    $if self.js:
+        $for script in self.js.split():
+            <script src="$script"></script>
+
+
+</body>
+</html>
