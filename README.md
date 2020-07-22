@@ -5,4 +5,7 @@
 ### 4. The sessions is used to make a person logged in and a log out button is given to end the session.
 
 ## The un-logged look of the site:
+![socialwizard1](https://user-images.githubusercontent.com/44469087/88183367-0402da80-cc4f-11ea-9fe5-11aaf5de9945.png)
+
+## The login in and Signd-up form look:
 
